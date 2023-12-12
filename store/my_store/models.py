@@ -10,14 +10,6 @@ class HomeNav(models.Model):
     image = models.ImageField()
 
 
-class Website(models.Model):
-    name = models.CharField(max_length=255)
-    description_website = models.TextField()
-    email = models.EmailField(unique=True)
-    contact = models.CharField(max_length=255)
-    map = models.TextField()
-
-
 class Products(models.Model):
     name = models.CharField(max_length=255)
     image = models.ImageField()
@@ -35,27 +27,12 @@ class TestBlog(models.Model):
     image = models.ImageField()
 
 
-class Testimonial(models.Model):
-    name = models.CharField(max_length=255)
-    message = models.TextField()
-
-
 class Contact(models.Model):
     name = models.CharField(max_length=255)
     phone_number = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
     message = models.TextField()
 
-
-class InstagramFeeds(models.Model):
-    images = models.ImageField()
-    lien_feeds = models.URLField()
-
-
-class SocialNetworks(models.Model):
-    name = models.CharField(max_length=255)
-    icon = models.FileField()  
-    lien = models.URLField()
 
 
 
